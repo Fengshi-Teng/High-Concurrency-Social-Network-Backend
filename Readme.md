@@ -4,12 +4,10 @@ A high-performance, concurrent Twitter-like server implemented in Go. This syste
 
 ## Key Features
 
-* 
-**Multi-Mode Execution**: Supports both sequential and parallel execution modes for comparative performance benchmarking.
+* **Multi-Mode Execution**: Supports both sequential and parallel execution modes for comparative performance benchmarking.
 
 
-* 
-**Thread-Safe Feed**: Implements a user news feed as a linked list with thread-safe operations.
+* **Thread-Safe Feed**: Implements a user news feed as a linked list with thread-safe operations.
 
 
 * **Custom Synchronization**: Utilizes a custom Read-Write Lock implemented using `sync.Cond` and `sync.Mutex` with a limit of 32 concurrent readers.
@@ -22,12 +20,10 @@ The system mimics a real-life client-server model where requests are streamed to
 
 ### Component Breakdown
 
-* 
-**`twitter.go`**: The entry point that configures the server, manages the feed, and initiates the run.
+* **`twitter.go`**: The entry point that configures the server, manages the feed, and initiates the run.
 
 
-* 
-**`server.go`**: Contains the main logic for spawning consumer goroutines (workers) and the producer function that populates the task queue.
+* **`server.go`**: Contains the main logic for spawning consumer goroutines (workers) and the producer function that populates the task queue.
 
 
 * **`feed.go`**: The core data structure. A linked list of posts protected by synchronization primitives to ensure correctness under concurrent access.
@@ -40,20 +36,16 @@ The project includes a benchmarking suite to evaluate speedup across various inp
 
 ### Analysis Insights
 
-* 
-**Scaling**: Speedup improves significantly for larger inputs as the overhead of synchronization is amortized over more computation.
+* **Scaling**: Speedup improves significantly for larger inputs as the overhead of synchronization is amortized over more computation.
 
 
-* 
-**Peak Efficiency**: Performance typically peaks at **6-8 threads** before saturation or contention causes a drop in speedup.
+* **Peak Efficiency**: Performance typically peaks at **6-8 threads** before saturation or contention causes a drop in speedup.
 
 
-* 
-**Contention**: At high thread counts (e.g., 12 threads), performance may degrade due to high contention in CAS retry loops within the lock-free queue.
+* **Contention**: At high thread counts (e.g., 12 threads), performance may degrade due to high contention in CAS retry loops within the lock-free queue.
 
 
-* 
-**Hardware Impact**: Performance is heavily influenced by CPU frequency and cache hierarchy, as linked-list operations are sensitive to pointer-chasing and cache misses.
+* **Hardware Impact**: Performance is heavily influenced by CPU frequency and cache hierarchy, as linked-list operations are sensitive to pointer-chasing and cache misses.
 
 
 
@@ -117,16 +109,13 @@ The results will produce a `speedup.png` file for analysis.
 
 ## 🔍 Future Optimizations
 
-* 
-**Work-Stealing**: Implementing per-thread queues to reduce cache invalidation and pointer contention.
+* **Work-Stealing**: Implementing per-thread queues to reduce cache invalidation and pointer contention.
 
 
-* 
-**Fine-Grained Locking**: Moving away from a coarse-grained RWLock to a lock-free linked list or skip-list for the feed.
+* **Fine-Grained Locking**: Moving away from a coarse-grained RWLock to a lock-free linked list or skip-list for the feed.
 
 
-* 
-**Hybrid Spinning**: Implementing hybrid spin-locks with backoff to reduce latency in the producer/consumer signaling.
+* **Hybrid Spinning**: Implementing hybrid spin-locks with backoff to reduce latency in the producer/consumer signaling.
 
 
 
