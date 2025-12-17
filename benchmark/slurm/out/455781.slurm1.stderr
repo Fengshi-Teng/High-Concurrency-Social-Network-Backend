@@ -1,0 +1,4 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(generate_speedup_graph.py:2532508): Gdk-CRITICAL **: 23:27:03.463: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed

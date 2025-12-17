@@ -1,0 +1,9 @@
+{"command": "ADD", "id": 1, "body": "just setting up my twttr", "timestamp": 43242423}
+{"command": "ADD", "id": 2, "body": "Another post to add", "timestamp": 43242421}
+{"command": "REMOVE", "id": 3, "timestamp": 43242423}
+{"command": "REMOVE", "id": 4, "timestamp": 43242423}
+{"command": "FEED", "id": 5}
+{"command": "ADD", "id": 6, "body": "Another post to add 2", "timestamp": 43242422}
+{"command": "ADD", "id": 7, "body": "Another post to add 3", "timestamp": 43242426}
+{"command": "FEED", "id": 8}
+{"command": "DONE"}

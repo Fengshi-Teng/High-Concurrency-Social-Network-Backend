@@ -1,0 +1,30 @@
+=== RUN   TestSimpleDone
+--- PASS: TestSimpleDone (0.28s)
+=== RUN   TestSimpleWaitDone
+--- PASS: TestSimpleWaitDone (3.01s)
+=== RUN   TestAddRequests
+--- PASS: TestAddRequests (20.25s)
+=== RUN   TestSimpleAddRequest
+--- PASS: TestSimpleAddRequest (1.01s)
+=== RUN   TestSimpleContainsRequest
+--- PASS: TestSimpleContainsRequest (6.27s)
+=== RUN   TestAddWithContainsRequest
+--- PASS: TestAddWithContainsRequest (12.36s)
+=== RUN   TestSimpleFeedRequest
+--- PASS: TestSimpleFeedRequest (0.25s)
+=== RUN   TestSimpleAddAndFeedRequest
+--- PASS: TestSimpleAddAndFeedRequest (0.27s)
+=== RUN   TestSimpleRemoveRequest
+--- PASS: TestSimpleRemoveRequest (6.27s)
+=== RUN   TestAllRequestsXtraSmall
+--- PASS: TestAllRequestsXtraSmall (0.26s)
+=== RUN   TestAllRequestsSmall
+--- PASS: TestAllRequestsSmall (0.24s)
+=== RUN   TestAllRequestsMedium
+--- PASS: TestAllRequestsMedium (1.41s)
+=== RUN   TestAllRequestsLarge
+--- PASS: TestAllRequestsLarge (5.26s)
+=== RUN   TestAllRequestsXtraLarge
+--- PASS: TestAllRequestsXtraLarge (65.50s)
+PASS
+ok  	proj2/twitter	122.682s

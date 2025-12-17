@@ -1,0 +1,5 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(generate_speedup_graph.py:1618371): Gdk-CRITICAL **: 20:01:05.093: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+slurmstepd-slurm1: error: *** JOB 455679 ON slurm1 CANCELLED AT 2025-11-10T20:06:22 DUE TO TIME LIMIT ***
