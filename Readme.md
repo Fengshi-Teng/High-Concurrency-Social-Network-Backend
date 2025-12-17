@@ -116,9 +116,3 @@ The results will produce a `speedup.png` file for analysis.
 
 
 * **Hybrid Spinning**: Implementing hybrid spin-locks with backoff to reduce latency in the producer/consumer signaling.
-
-
-
----
-
-**Would you like me to generate a specific `docker-compose.yml` file so you can run this entire benchmarking environment in a container?**
